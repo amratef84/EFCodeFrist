@@ -4,6 +4,7 @@ using EFCodeFrist;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EFCodeFrist.Migrations
 {
     [DbContext(typeof(ModelDBContext))]
-    partial class ModelDBContextModelSnapshot : ModelSnapshot
+    [Migration("20230914074705_AddAuditColom2AllTables")]
+    partial class AddAuditColom2AllTables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -33,7 +35,7 @@ namespace EFCodeFrist.Migrations
                     b.Property<DateTime>("CreateAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("CreateBy")
+                    b.Property<int>("CreateBy")
                         .HasColumnType("int");
 
                     b.Property<string>("Description")
@@ -45,10 +47,10 @@ namespace EFCodeFrist.Migrations
                     b.Property<int>("StudentsId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("UpdateAt")
+                    b.Property<DateTime>("UpdateAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("UpdateBy")
+                    b.Property<int>("UpdateBy")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -69,7 +71,7 @@ namespace EFCodeFrist.Migrations
                     b.Property<DateTime>("CreateAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("CreateBy")
+                    b.Property<int>("CreateBy")
                         .HasColumnType("int");
 
                     b.Property<string>("Description")
@@ -83,10 +85,10 @@ namespace EFCodeFrist.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("UpdateAt")
+                    b.Property<DateTime>("UpdateAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("UpdateBy")
+                    b.Property<int>("UpdateBy")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -128,7 +130,7 @@ namespace EFCodeFrist.Migrations
                     b.Property<DateTime>("CreateAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("CreateBy")
+                    b.Property<int>("CreateBy")
                         .HasColumnType("int");
 
                     b.Property<string>("Description")
@@ -145,10 +147,10 @@ namespace EFCodeFrist.Migrations
                     b.Property<int>("TeachersId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("UpdateAt")
+                    b.Property<DateTime>("UpdateAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("UpdateBy")
+                    b.Property<int>("UpdateBy")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -169,7 +171,7 @@ namespace EFCodeFrist.Migrations
                     b.Property<DateTime>("CreateAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("CreateBy")
+                    b.Property<int>("CreateBy")
                         .HasColumnType("int");
 
                     b.Property<string>("Description")
@@ -183,10 +185,10 @@ namespace EFCodeFrist.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("UpdateAt")
+                    b.Property<DateTime>("UpdateAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("UpdateBy")
+                    b.Property<int>("UpdateBy")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
